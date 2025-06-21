@@ -1,0 +1,11 @@
+
+Este es el sistema de detección de zanahorias, diseñado para su ejecución en el Jetson Nano. El Jetson estará equipado con un vehículo terrestre no tripulado (UGV), que tomará fotos de los cultivos de zanahorias en toda la zona de cultivo. En este caso, las fotos se simularon utilizando un conjunto de datos.
+Los componentes principales del sistema son:
+
+🐍UNet_TR.py : extrae la imagen, la almacena en Jetson Nano, realiza la predicción de IA y calcula el porcentaje de plantas sanas y con arbustos. Consiste en optimizar el modelo con TensorRT.
+
+🐍Load_DB.py : carga en la base de datos MySQL las estadísticas y rutas de la imagen original y prevista una vez que finaliza la IA.
+
+🐍Main.py : controlador de todo el sistema, responsable de ejecutar cada parte sistemáticamente.
+
+💻run_unetRT.sh: ejecuta main.py usando argumentos de la CLI para ejecutarlo automáticamente. Se requiere una gran cantidad de framework para el correcto funcionamiento del modelo de IA. 
